@@ -1,0 +1,7 @@
+# File: public/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.flyttdirekt.se/sitemap.xml
