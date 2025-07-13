@@ -72,7 +72,7 @@ const Commercial = () => {
                             </div>
                         </div>
                         <div className="wpo-service-text">
-                            <h2><Link onClick={ClickHandler} href="/service-single/[slug]" as={`/service-single/${service.slug}`}>{service.sTitle}</Link></h2>
+                            <h2><Link onClick={ClickHandler} href="/[slug]" as={`/${service.slug}`}>{service.sTitle}</Link></h2>
                         </div>
                     </div>
                 ))}

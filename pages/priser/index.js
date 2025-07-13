@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
-import Navbar from '../../components/Navbar/Navbar'
-import PageTitle from '../../components/pagetitle/PageTitle'
+import Navbar from '../../components/Navbar/Navbar.js'
+import PageTitle from '../../components/pagetitle/PageTitle.js'
 import Footer from '../../components/footer/Footer.js'
-import Scrollbar from '../../components/scrollbar/scrollbar'
-import Pricing from '../../components/Pricing/Pricing'
+import Scrollbar from '../../components/scrollbar/scrollbar.js'
+import Pricing from '../../components/Pricing/Pricing.js'
 import Head from 'next/head';
 
 const PricingPage =() => {

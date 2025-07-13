@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from '../ContactFrom/ContactForm'
+import ElfsightForm from '../ElfsightForm/ElfsightForm';
 
 const Contactpage = () => {
 
@@ -58,7 +58,7 @@ const Contactpage = () => {
                             <p>Fyll i formuläret nedan så återkommer vi till dig så snart som möjligt. Du kan även nå oss via telefon eller e-post.</p>
                         </div>
                         <div className="wpo-contact-form-area">
-                            <ContactForm/>
+                            <ElfsightForm />
                         </div>
                     </div>                
                 </div>

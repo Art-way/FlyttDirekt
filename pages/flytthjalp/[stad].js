@@ -8,6 +8,7 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
+import ServiceSidebar from '../../components/ServiceSidebar/ServiceSidebar'; // Importera den nya komponenten
 
 const locations = require('../../api/locations');
 // Använd en befintlig bild
@@ -89,24 +90,10 @@ const LocalServicePage = ({ location }) => {
                                 </div>
                             </div>
                         </div>
+                        
+                        {/* Ersätt den gamla sidomenyn med den nya komponenten */}
+                        <ServiceSidebar />
 
-                        <div className="col-lg-4 col-md-8">
-                            <div className="wpo-single-sidebar">
-                                <div className="wpo-service-widget widget">
-                                    <h2>Tjänster i {location.name}</h2>
-                                    <ul>
-                                        <li><Link href={`/flytthjalp/${location.slug}`}>Flytthjälp</Link></li>
-                                        <li><Link href="/flyttstadning">Flyttstädning</Link></li>
-                                        <li><Link href="/magasinering">Magasinering</Link></li>
-                                    </ul>
-                                </div>
-                                <div className="wpo-contact-widget widget">
-                                    <h2>Varför välja oss?</h2>
-                                    <p>✔ Erfaren personal<br/>✔ Fullt försäkrade<br/>✔ Lokal expertis<br/>✔ Fasta priser<br/>✔ RUT-avdrag</p>
-                                    <Link href="/om-oss">Läs mer om oss</Link>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

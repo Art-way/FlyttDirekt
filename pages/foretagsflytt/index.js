@@ -5,9 +5,10 @@ import Footer from '../../components/footer/Footer.js';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
 import Head from 'next/head';
+import ServiceSidebar from '../../components/ServiceSidebar/ServiceSidebar'; // Importera den nya komponenten
 
 // استخدام صور موجودة من القالب
-import serviceImg from '/public/images/service/4.jpg'; 
+import serviceImg from '/public/images/service/4.jpg';
 import serviceImg2 from '/public/images/projects/img-2.jpg';
 import serviceImg3 from '/public/images/team/bg.jpg';
 
@@ -62,15 +63,15 @@ const ForetagsflyttPage = () => {
         <Fragment>
             <Head>
                 <title>Företagsflytt & Kontorsflytt Stockholm | Flyttdirekt.se</title>
-                <meta 
-                    name="description" 
-                    content="Planerar ni att flytta kontor? Vi erbjuder professionell företagsflytt med minimalt driftstopp. Kontakta oss för en offert på er kontorsflytt i Stockholm." 
+                <meta
+                    name="description"
+                    content="Planerar ni att flytta kontor? Vi erbjuder professionell företagsflytt med minimalt driftstopp. Kontakta oss för en offert på er kontorsflytt i Stockholm."
                 />
-                <script 
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
                 />
-                <script 
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
                 />
@@ -78,7 +79,7 @@ const ForetagsflyttPage = () => {
 
             <Navbar />
             <PageTitle pageTitle={'Effektiv Företagsflytt med Minimalt Driftstopp'} pagesub={'Våra Tjänster'} />
-            
+
             <section className="wpo-service-single-section section-padding">
                 <div className="container">
                     <div className="row">
@@ -99,7 +100,7 @@ const ForetagsflyttPage = () => {
                                                 <li><Image src={serviceImg3} alt="Strukturerad uppmärkning och packning" /></li>
                                             </ul>
                                         </div>
-                                        
+
                                         <h2>Vår process för en lyckad kontorsflytt</h2>
                                         <p>Vi vet att tid är pengar. Därför följer vi en beprövad process för att säkerställa en lyckad flytt.</p>
                                         <ul>
@@ -114,32 +115,15 @@ const ForetagsflyttPage = () => {
                                         <p>
                                             Vi utför uppdrag i hela regionen, från en specialiserad <strong>kontorsflytt i Bromma</strong> till storskaliga projekt som <strong>kontorsflytt i Upplands Väsby</strong>. Oavsett var ert nya kontor ligger, kan ni lita på att vi har den lokala kunskapen och resurserna som krävs.
                                         </p>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4 col-md-8">
-                            <div className="wpo-single-sidebar">
-                                <div className="wpo-service-widget widget">
-                                    <h2>Alla Tjänster</h2>
-                                    <ul>
-                                        <li><a href="/flytthjalp">Flytthjälp</a></li>
-                                        <li><a href="/flyttstadning">Flyttstädning</a></li>
-                                        <li><a href="/magasinering">Magasinering</a></li>
-                                        <li><a href="/foretagsflytt">Företagsflytt</a></li>
-                                        <li><a href="/pianoflytt">Pianoflytt</a></li>
-                                    </ul>
-                                </div>
-                                <div className="wpo-contact-widget widget">
-                                    <h2>Planera er flytt?</h2>
-                                    <p>Kontakta oss för en kostnadsfri konsultation och en skräddarsydd offert för just er företagsflytt.</p>
-                                    <a href="/kontakt">Begär Offert</a>
-                                </div>
-                            </div>
-                        </div>
+                        {/* Ersätt den gamla sidomenyn med den nya komponenten */}
+                        <ServiceSidebar />
+                        
                     </div>
                 </div>
             </section>

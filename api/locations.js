@@ -52,6 +52,10 @@ const locations = [
         name: 'Haninge',
         description: 'Från Brandbergen till Dalarö, vi är din expert på flytthjälp och magasinering i Haninge. Säker och pålitlig service.'
     },
+        { name: 'Upplands Väsby', slug: 'upplands-vasby', description: 'Vi erbjuder effektiva och säkra företagsflyttar och bohagsflyttar i Upplands Väsby.' },
+
+        { name: 'Järfälla', slug: 'jarfalla', description: 'Vi är din lokala flyttfirma i Järfälla, redo att hjälpa dig med en smidig och stressfri flytt.' },
+
     { 
         slug: 'vallingby', 
         name: 'Vällingby',
@@ -67,6 +71,8 @@ const locations = [
         name: 'Norrtälje',
         description: 'Vi erbjuder flytthjälp i hela Roslagen. Kontakta oss för din flytt till, från eller inom Norrtälje kommun.'
     },
+        { name: 'Sundbyberg', slug: 'sundbyberg', description: 'Sveriges till ytan minsta kommun kräver en flyttfirma med precision. Vi är ditt lokala val i Sundbyberg.' },
+
     { 
         slug: 'strangnas', 
         name: 'Strängnäs',

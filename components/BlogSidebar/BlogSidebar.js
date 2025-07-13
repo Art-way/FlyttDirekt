@@ -3,12 +3,16 @@ import Link from "next/link";
 import Services from '../../api/service';
 import blogs from '../../api/blogs'; // Använder de svenska blogginläggen
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 // Importera bilder direkt här
 import aboutWidgetImg from '/public/images/blog/about-widget.jpg';
-import projectImg1 from '/public/images/projects/img-1.jpg';
-import projectImg2 from '/public/images/projects/img-2.jpg';
-import projectImg3 from '/public/images/projects/img-3.jpg';
+
+// Dynamically import the ElfsightForm component with SSR turned off
+const ElfsightForm = dynamic(
+    () => import('../ElfsightForm/ElfsightForm'),
+    { ssr: false }
+);
 
 
 const SubmitHandler = (e) => {
@@ -88,6 +92,9 @@ const BlogSidebar = (props) => {
                         <li><Link onClick={ClickHandler} href="/blogg">Magasinering</Link></li>
                         <li><Link onClick={ClickHandler} href="/blogg">Checklista</Link></li>
                     </ul>
+                </div>
+                <div className="widget">
+                    <ElfsightForm />
                 </div>
                 <div className="wpo-contact-widget widget">
                     <h2>Hur kan vi<br /> hjälpa dig?</h2>

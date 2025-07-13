@@ -1,19 +1,20 @@
+// File: pages/flyttstadning/index.js
+// المحتوى: صفحة خدمة "المساعدة في النقل" مع نصوص احترافية ومحسنة لمحركات البحث
+
 import React, { Fragment } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Footer from '../../components/footer/Footer.js';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
-import Head from 'next/head'; // Importera Head för SEO
+import Head from 'next/head';
+import ServiceSidebar from '../../components/ServiceSidebar/ServiceSidebar';
 
-// Använd en befintlig bild från mallen
+// استخدام صور مناسبة من القالب
 import serviceImg from '/public/images/service/2.jpg';
-import serviceImg2 from '/public/images/project-single/1.jpg';
-import serviceImg3 from '/public/images/service-single/1.jpg';
 
 const FlyttstadningPage = () => {
-
-    // Schema Markup för SEO (JSON-LD)
+    // Schema Markup لخدمة Flytthjälp
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -21,7 +22,7 @@ const FlyttstadningPage = () => {
         "provider": {
             "@type": "LocalBusiness",
             "name": "Flyttdirekt.se",
-            "image": "https://www.flyttdirekt.se/images/logo.svg", // Byt till din logotyp-URL
+            "image": "https://www.flyttdirekt.se/images/logo.svg",
             "telephone": "+46-8-123-45-678",
             "address": {
                 "@type": "PostalAddress",
@@ -29,7 +30,8 @@ const FlyttstadningPage = () => {
                 "addressLocality": "Stockholm",
                 "postalCode": "12345",
                 "addressCountry": "SE"
-            }
+            },
+            "priceRange": "Kontakta för offert"
         },
         "areaServed": {
             "@type": "Country",
@@ -38,6 +40,7 @@ const FlyttstadningPage = () => {
         "description": "Professionell flyttstädning med 100% nöjd-kund-garanti. Vi följer Mäklarsamfundets rekommendationer och ser till att din gamla bostad är skinande ren för nästa ägare."
     };
 
+    // Schema Markup للأسئلة الشائعة (FAQ)
     const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -66,7 +69,6 @@ const FlyttstadningPage = () => {
                     name="description" 
                     content="Boka garanterad flyttstädning till fast pris. Vi följer en komplett checklista för skinande rena resultat. Få RUT-avdrag direkt på fakturan." 
                 />
-                {/* Lägg till Schema Markup i Head */}
                 <script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -117,26 +119,9 @@ const FlyttstadningPage = () => {
                             </div>
                         </div>
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4 col-md-8">
-                            <div className="wpo-single-sidebar">
-                                <div className="wpo-service-widget widget">
-                                    <h2>Alla Tjänster</h2>
-                                    <ul>
-                                        <li><a href="/flytthjalp">Flytthjälp</a></li>
-                                        <li><a href="/flyttstadning">Flyttstädning</a></li>
-                                        <li><a href="/magasinering">Magasinering</a></li>
-                                        <li><a href="/foretagsflytt">Företagsflytt</a></li>
-                                        <li><a href="/pianoflytt">Pianoflytt</a></li>
-                                    </ul>
-                                </div>
-                                <div className="wpo-contact-widget widget">
-                                    <h2>Boka din städning</h2>
-                                    <p>Slipp stressen och låt oss sköta städningen. Kontakta oss idag för ett fast pris och garanterat resultat.</p>
-                                    <a href="/kontakt">Begär Offert</a>
-                                </div>
-                            </div>
-                        </div>
+                        {/* Ersätt den gamla sidomenyn med den nya komponenten */}
+                        <ServiceSidebar />
+                        
                     </div>
                 </div>
             </section>

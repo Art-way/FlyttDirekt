@@ -1,16 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react';
 import Link from "next/link";
-import HeaderTopbar from '../HeaderTopbar/HeaderTopbar'
-import MobileMenu from '../MobileMenu/MobileMenu'
-import Logo from '../../public/images/Logo.svg'
-import Image from 'next/image'
+import HeaderTopbar from '../HeaderTopbar/HeaderTopbar';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import Logo from '/public/images/logo.svg';
+import Image from 'next/image';
 
 const Header = (props) => {
-    const [menuActive, setMenuState] = useState(false);
-    const SubmitHandler = (e) => {
-        e.preventDefault()
-    }
-
+    
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
@@ -38,44 +34,29 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li><Link onClick={ClickHandler} href="/">Hem</Link></li>
-                                        <li><Link onClick={ClickHandler} href="/om-oss">Om Oss</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/om-oss/">Om Oss</Link></li>
                                         <li className="menu-item-has-children">
                                             <Link href="/#services">Tjänster</Link>
                                             <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/flytthjalp">Flytthjälp</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/flyttstadning">Flyttstädning</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/magasinering">Magasinering</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/foretagsflytt">Företagsflytt</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/pianoflytt">Pianoflytt</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/flytthjalp/">Flytthjälp</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/flyttstadning/">Flyttstädning</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/magasinering/">Magasinering</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/foretagsflytt/">Företagsflytt</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/pianoflytt/">Pianoflytt</Link></li>
                                             </ul>
                                         </li>
-                                        <li><Link onClick={ClickHandler} href="/blogg">Blogg</Link></li>
-                                        <li><Link onClick={ClickHandler} href="/kontakt">Kontakt</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/blogg/">Blogg</Link></li>
+                                        <li><Link onClick={ClickHandler} href="/kontakt/">Kontakt</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-2 col-2">
                                 <div className="header-right">
-                                    <div className="header-search-form-wrapper">
-                                        <div className="cart-search-contact">
-                                            <button onClick={() => setMenuState(!menuActive)} className="search-toggle-btn"><i
-                                                className={`ti-search ${menuActive ? "ti-close" : "ti-search"}`}></i></button>
-                                            <div className={`header-search-form ${menuActive ? "header-search-content-toggle" : ""}`}>
-                                                <form onSubmit={SubmitHandler}>
-                                                    <div>
-                                                        <input type="text" className="form-control"
-                                                            placeholder="Sök här..." />
-                                                        <button type="submit"><i
-                                                            className="fi ti-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div className="close-form">
-                                        <a onClick={ClickHandler} className="theme-btn" href="tel:08-12345678"> <i className="fa fa-phone"
-                                            aria-hidden="true"></i>
-                                            <span>Få en kostnadsfri offert</span> 08-123 45 678</a>
+                                        <a onClick={ClickHandler} className="theme-btn" href="tel:08-12345678">
+                                            <i className="fa fa-phone" aria-hidden="true"></i>
+                                            <span>Få en kostnadsfri offert</span> 08-123 45 678
+                                        </a>
                                     </div>
                                 </div>
                             </div>

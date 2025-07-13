@@ -6,6 +6,7 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
+import ServiceSidebar from '../../components/ServiceSidebar/ServiceSidebar'; // Importera den nya komponenten
 
 // استخدام صور مناسبة من القالب
 import serviceImg from '/public/images/about.jpg';
@@ -63,31 +64,19 @@ const FlyttfirmaPage = () => {
                                     <div className="wpo-service-single-content-des">
                                         <h2>Vad gör en professionell flyttfirma?</h2>
                                         <p>
-                                            En <strong>flyttfirma</strong> är ett företag som specialiserar sig på att hjälpa privatpersoner och företag att flytta deras ägodelar från en plats till en annan. Men en modern och professionell flyttfirma gör så mycket mer än att bara bära och transportera.
+                                            En <strong>flyttfirma</strong> är ett företag som specialiserar sig på att hjälpa privatpersoner och företag att flytta deras ägodelar från en plats till en annan. Men en modern och professionell flyttfirma gör så mycket mer än att bara bära och transportera. Det handlar om att erbjuda en komplett och stressfri upplevelse, från första kartongen till sista möbeln är på plats.
                                         </p>
                                         <p>
                                             Hos oss på Flyttdirekt får du en helhetslösning. Vi erbjuder ett brett spektrum av tjänster för att göra din flytt så enkel som möjligt.
                                         </p>
 
-                                        <h3>Våra Kärntjänster:</h3>
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <h4><Link href="/flytthjalp">Flytthjälp</Link></h4>
-                                                <p>Själva transporten av ditt bohag, utförd av erfaren personal.</p>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <h4><Link href="/flyttstadning">Flyttstädning</Link></h4>
-                                                <p>Garanterad städning av din gamla bostad så att den blir godkänd.</p>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <h4><Link href="/foretagsflytt">Företagsflytt</Link></h4>
-                                                <p>Effektiv och strukturerad flytt av kontor och verksamheter.</p>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <h4><Link href="/magasinering">Magasinering</Link></h4>
-                                                <p>Säker förvaring av dina möbler och ägodelar.</p>
-                                            </div>
-                                        </div>
+                                        <h3>Fördelarna med att anlita en professionell flyttfirma</h3>
+                                        <ul>
+                                            <li><strong>Tidsbesparing:</strong> Vårt erfarna team arbetar snabbt och effektivt, vilket frigör tid för dig att fokusera på annat.</li>
+                                            <li><strong>Trygghet och Säkerhet:</strong> Vi har rätt utrustning och teknik för att hantera dina ägodelar varsamt och är fullt försäkrade.</li>
+                                            <li><strong>Minskad Stress:</strong> Vi tar hand om logistiken och det tunga arbetet, så att du kan få en lugnare flyttdag.</li>
+                                            <li><strong>Effektivitet:</strong> Med vår erfarenhet optimerar vi packning och transport för att göra flytten så smidig som möjligt.</li>
+                                        </ul>
 
                                         <div className="wpo-service-single-sub-img" style={{marginTop: '30px'}}>
                                             <ul>
@@ -97,38 +86,22 @@ const FlyttfirmaPage = () => {
                                         </div>
                                         
                                         <h2>Checklista: Att tänka på när du anlitar en flyttfirma</h2>
-                                        <p>Att välja rätt bland alla <strong>rekommenderade flyttfirmor</strong> kan vara svårt. Här är en snabb checklista:</p>
+                                        <p>Att välja rätt bland alla <strong>rekommenderade flyttfirmor</strong> kan vara svårt. Här är en utökad checklista som hjälper dig:</p>
                                         <ul>
-                                            <li><strong>Kontrollera F-skatt och försäkringar:</strong> En seriös firma har alltid F-skattsedel och en gällande transportöransvarsförsäkring.</li>
-                                            <li><strong>Begär en tydlig offert:</strong> Se till att du får ett skriftligt avtal som specificerar vad som ingår. Läs mer om <Link href="/17/28/vad-kostar-flyttfirma-stockholm">vad en flyttfirma kostar</Link>.</li>
-                                            <li><strong>Läs omdömen:</strong> Vad säger tidigare kunder? Omdömen är en bra indikator på företagets kvalitet.</li>
-                                            <li><strong>Fråga om RUT-avdrag:</strong> Säkerställ att firman hanterar RUT-avdraget direkt på fakturan.</li>
+                                            <li><strong>Kontrollera F-skatt och försäkringar:</strong> En seriös firma har alltid F-skattsedel och en gällande transportöransvarsförsäkring (Bohag 2010). Fråga efter bevis!</li>
+                                            <li><strong>Begär en tydlig offert:</strong> Se till att du får ett skriftligt avtal som specificerar vad som ingår, inklusive moms och eventuellt RUT-avdrag. Jämför <Link href="/priser">våra priser</Link> och läs vår guide om <Link href="/17/28/vad-kostar-flyttfirma-stockholm">vad en flyttfirma kostar</Link>.</li>
+                                            <li><strong>Läs omdömen:</strong> Vad säger tidigare kunder? Leta efter omdömen på oberoende plattformar.</li>
+                                            <li><strong>Fråga om RUT-avdrag:</strong> Säkerställ att firman hanterar <Link href="/17/27/rutavdrag-flyttfirma-guide">RUT-avdraget</Link> direkt på fakturan.</li>
+                                            <li><strong>Personlig kontakt:</strong> En bra flyttfirma är lätt att kommunicera med och svarar på dina frågor. Läs mer <Link href="/om-oss">om oss</Link> och vår filosofi.</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4 col-md-8">
-                            <div className="wpo-single-sidebar">
-                                <div className="wpo-service-widget widget">
-                                    <h2>Hitta din lokala flytthjälp</h2>
-                                    <ul>
-                                        <li><Link href="/flytthjalp/stockholm">Flytthjälp Stockholm</Link></li>
-                                        <li><Link href="/flytthjalp/sollentuna">Flytthjälp Sollentuna</Link></li>
-                                        <li><Link href="/flytthjalp/nacka">Flytthjälp Nacka</Link></li>
-                                        <li><Link href="/flytthjalp/taby">Flytthjälp Täby</Link></li>
-                                        <li><Link href="/flytthjalp/bromma">Flytthjälp Bromma</Link></li>
-                                    </ul>
-                                </div>
-                                <div className="wpo-contact-widget widget">
-                                    <h2>Redo att boka?</h2>
-                                    <p>Vi är redo att hjälpa dig. Kontakta oss idag för en kostnadsfri offert och personlig service du kan lita på.</p>
-                                    <a href="/kontakt">Kontakta Oss</a>
-                                </div>
-                            </div>
-                        </div>
+                        {/* Ersätt den gamla sidomenyn med den nya komponenten */}
+                        <ServiceSidebar />
+                        
                     </div>
                 </div>
             </section>

@@ -1,3 +1,6 @@
+// File: pages/magasinering/index.js
+// المحتوى: صفحة خدمة "التخزين" مع نصوص احترافية ومحسنة لمحركات البحث
+
 import React, { Fragment } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import PageTitle from '../../components/pagetitle/PageTitle';
@@ -5,6 +8,7 @@ import Footer from '../../components/footer/Footer.js';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
 import Head from 'next/head';
+import ServiceSidebar from '../../components/ServiceSidebar/ServiceSidebar'; // Importera den nya komponenten
 
 // استخدام صور موجودة من القالب
 import serviceImg from '/public/images/service/3.jpg';
@@ -12,7 +16,6 @@ import serviceImg2 from '/public/images/service-single/3.jpg';
 import serviceImg3 from '/public/images/projects/img-3.jpg';
 
 const MagasineringPage = () => {
-
     // Schema Markup لخدمة Magasinering
     const serviceSchema = {
         "@context": "https://schema.org",
@@ -63,30 +66,19 @@ const MagasineringPage = () => {
         <Fragment>
             <Head>
                 <title>Magasinering & Möbelförvaring i Stockholm | Säkra Förråd</title>
-                <meta 
-                    name="description" 
-                    content="Behöver du magasinering i Stockholm? Vi erbjuder säker och prisvärd förvaring av möbler och bohag. Kontakta oss för att hyra förråd idag." 
-                />
-                <script 
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-                />
-                <script 
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-                />
+                <meta name="description" content="Behöver du magasinering i Stockholm? Vi erbjuder säker och prisvärd förvaring av möbler och bohag. Kontakta oss för att hyra förråd idag." />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             </Head>
-
             <Navbar />
             <PageTitle pageTitle={'Säker och Flexibel Magasinering'} pagesub={'Våra Tjänster'} />
-            
             <section className="wpo-service-single-section section-padding">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-12">
                             <div className="wpo-service-single-wrap">
                                 <div className="wpo-service-single-img">
-                                    <Image src={serviceImg} alt="Magasinering av möbler i Stockholm" />
+                                    <Image src={serviceImg} alt="Säkert och rent förråd för magasinering av möbler i Stockholm" />
                                 </div>
                                 <div className="wpo-service-single-content">
                                     <div className="wpo-service-single-content-des">
@@ -99,54 +91,33 @@ const MagasineringPage = () => {
                                         </p>
                                         <div className="wpo-service-single-sub-img">
                                             <ul>
-                                                <li><Image src={serviceImg2} alt="Säkert och larmat förråd" /></li>
-                                                <li><Image src={serviceImg3} alt="Flexibel möbelförvaring" /></li>
+                                                <li><Image src={serviceImg2} alt="Larmat och videoövervakat förråd" /></li>
+                                                <li><Image src={serviceImg3} alt="Flexibel möbelförvaring för kort eller lång tid" /></li>
                                             </ul>
                                         </div>
-                                        
                                         <h2>Varför välja vår magasinering?</h2>
                                         <p>När du väljer att hyra förråd hos oss får du mer än bara ett utrymme. Du får sinnesro.</p>
                                         <ul>
                                             <li><strong>Säkerhet:</strong> Våra anläggningar är larmade och videoövervakade dygnet runt.</li>
                                             <li><strong>Klimatkontroll:</strong> Vi erbjuder tempererade förråd för att skydda känsliga föremål som elektronik och konst.</li>
                                             <li><strong>Flexibilitet:</strong> Hyr förråd så länge du behöver, från en vecka till flera år.</li>
-                                            <li><strong>Tillgänglighet:</strong> Du har tillgång till ditt förråd när du behöver det.</li>
+                                            <li><strong>Helhetslösning:</strong> Vi kan hämta, förvara och sedan köra ut dina saker till din nya adress.</li>
                                         </ul>
-
                                         <h2>Prisvärd magasinering</h2>
                                         <p>
                                             Vi strävar efter att erbjuda prisvärd magasinering utan dolda avgifter. Kontakta oss idag för att diskutera dina förvaringsbehov och få en kostnadsfri offert.
                                         </p>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        {/* Ersätt den gamla sidomenyn med den nya komponenten */}
+                        <ServiceSidebar />
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4 col-md-8">
-                            <div className="wpo-single-sidebar">
-                                <div className="wpo-service-widget widget">
-                                    <h2>Alla Tjänster</h2>
-                                    <ul>
-                                        <li><a href="/flytthjalp">Flytthjälp</a></li>
-                                        <li><a href="/flyttstadning">Flyttstädning</a></li>
-                                        <li><a href="/magasinering">Magasinering</a></li>
-                                        <li><a href="/foretagsflytt">Företagsflytt</a></li>
-                                        <li><a href="/pianoflytt">Pianoflytt</a></li>
-                                    </ul>
-                                </div>
-                                <div className="wpo-contact-widget widget">
-                                    <h2>Behöver du förråd?</h2>
-                                    <p>Vi har den perfekta förvaringslösningen för dig. Kontakta oss för att få ett prisförslag och boka ditt förråd.</p>
-                                    <a href="/kontakt">Kontakta Oss</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
-
             <Footer />
             <Scrollbar />
         </Fragment>

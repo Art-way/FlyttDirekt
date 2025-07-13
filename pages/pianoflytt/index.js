@@ -5,14 +5,14 @@ import Footer from '../../components/footer/Footer.js';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
 import Head from 'next/head';
+import ServiceSidebar from '../../components/ServiceSidebar/ServiceSidebar'; // Importera den nya komponenten
 
 // استخدام صور موجودة من القالب
-import serviceImg from '/public/images/service/5.jpg'; 
+import serviceImg from '/public/images/service/5.jpg';
 import serviceImg2 from '/public/images/projects/img-4.jpg';
 import serviceImg3 from '/public/images/service/10.jpg';
 
 const PianoflyttPage = () => {
-
     // Schema Markup لخدمة Pianoflytt
     const serviceSchema = {
         "@context": "https://schema.org",
@@ -35,7 +35,7 @@ const PianoflyttPage = () => {
             "@type": "City",
             "name": "Stockholm"
         },
-        "description": "Säker och professionell pianoflytt i Stockholm. Vi har expertisen och specialutrustningen för att flytta pianon och flyglar tryggt."
+        "description": "Specialiserad och försäkrad pianoflytt i Stockholm. Vi har rätt utrustning och erfarenhet för att flytta ditt piano eller din flygel på ett säkert sätt."
     };
 
     const faqSchema = {
@@ -61,91 +61,59 @@ const PianoflyttPage = () => {
     return (
         <Fragment>
             <Head>
-                <title>Pianoflytt Stockholm - Pris & Offert för att Flytta Piano</title>
-                <meta 
-                    name="description" 
-                    content="Professionell pianoflytt i Stockholm till fast pris. Vi har erfarenhet av att flytta pianon och flyglar säkert. Få en kostnadsfri offert idag." 
-                />
-                <script 
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-                />
-                <script 
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-                />
+                <title>Pianoflytt & Tunga Lyft Stockholm | Specialiserad Transport</title>
+                <meta name="description" content="Behöver du hjälp med pianoflytt i Stockholm? Vi är specialister på tunga lyft och transport av pianon och flyglar. Försäkring ingår alltid." />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             </Head>
-
             <Navbar />
-            <PageTitle pageTitle={'Säker och Professionell Pianoflytt'} pagesub={'Våra Tjänster'} />
-            
+            <PageTitle pageTitle={'Specialister på Pianoflytt & Tunga Lyft'} pagesub={'Våra Tjänster'} />
             <section className="wpo-service-single-section section-padding">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-12">
                             <div className="wpo-service-single-wrap">
                                 <div className="wpo-service-single-img">
-                                    <Image src={serviceImg} alt="Säker pianoflytt i Stockholm" />
+                                    <Image src={serviceImg} alt="Specialister som utför en säker pianoflytt" />
                                 </div>
                                 <div className="wpo-service-single-content">
                                     <div className="wpo-service-single-content-des">
-                                        <h2>Expertis för att flytta ditt piano eller din flygel</h2>
+                                        <h2>Säker Pianoflytt med Rätt Teknik och Utrustning</h2>
                                         <p>
-                                            Att <strong>flytta piano</strong> är ett uppdrag som kräver mer än bara styrka – det kräver teknik, erfarenhet och rätt utrustning. Flyttdirekt erbjuder specialiserad <strong>pianoflytt i Stockholm</strong> och ser till att ditt värdefulla instrument hanteras med största omsorg. Vi klassificerar detta som <strong>tunga lyft</strong> och har ett dedikerat team för just dessa uppdrag.
+                                            Ett piano är inte bara en tung möbel – det är ett värdefullt och känsligt instrument som kräver specialhantering. Att försöka flytta ett piano utan rätt kunskap kan leda till kostsamma skador. Vi på Flyttdirekt är <strong>specialister på pianoflytt i Stockholm</strong> och har den erfarenhet och utrustning som krävs för att utföra jobbet säkert.
                                         </p>
                                         <p>
-                                            Oavsett om det är ett gammalt ärvt piano eller en ny konsertflygel, förstår vi instrumentets värde, både ekonomiskt och sentimentalt. Vi vet hur man bär, säkrar och transporterar för att undvika skador.
+                                            Oavsett om du har ett upprättstående piano, en ståtlig flygel eller ett tungt kassaskåp, kan du lita på att vi hanterar ditt tunga lyft med största precision och omsorg.
                                         </p>
                                         <div className="wpo-service-single-sub-img">
                                             <ul>
-                                                <li><Image src={serviceImg2} alt="Specialutrustning för tunga lyft" /></li>
-                                                <li><Image src={serviceImg3} alt="Försiktig transport av flygel" /></li>
+                                                <li><Image src={serviceImg2} alt="Användning av bärselar för pianoflytt" /></li>
+                                                <li><Image src={serviceImg3} alt="Skyddande emballage för en flygel" /></li>
                                             </ul>
                                         </div>
-                                        
-                                        <h2>Vår metod för en säker pianoflytt</h2>
-                                        <p>Information om <strong>piano vikt</strong> är avgörande. Vår process är utformad för att hantera instrumentets tyngd och ömtålighet.</p>
+                                        <h2>Vår expertis inom tunga lyft:</h2>
+                                        <p>En säker pianoflytt handlar om mer än bara muskelstyrka. Det handlar om teknik.</p>
                                         <ul>
-                                            <li><strong>Besiktning:</strong> Vi analyserar förutsättningarna på plats, inklusive trappor, dörröppningar och hissar.</li>
-                                            <li><strong>Skydd:</strong> Pianot skyddas noggrant med filtar och specialanpassat emballage.</li>
-                                            <li><strong>Bärselar & Utrustning:</strong> Vi använder alltid professionella bärselar och pianovagnar för att säkerställa ett säkert lyft.</li>
-                                            <li><strong>Säker transport:</strong> Instrumentet spänns fast ordentligt i våra bilar för en stabil transport.</li>
+                                            <li><strong>Specialutrustning:</strong> Vi använder bärselar, pianomattor, ramper och skyddande emballage.</li>
+                                            <li><strong>Erfaret Team:</strong> Vår personal är specifikt tränad för att hantera tunga och otympliga föremål.</li>
+                                            <li><strong>Anpassad Transport:</strong> Våra bilar är utrustade för att säkra pianot ordentligt under transporten.</li>
+                                            <li><strong>Full Försäkring:</strong> Vi har en specialförsäkring som täcker eventuella skador under flytten.</li>
                                         </ul>
-
-                                        <h2>Vad kostar det att flytta ett piano?</h2>
+                                        <h2>Vi flyttar alla typer av tunga föremål</h2>
                                         <p>
-                                            Få ett fast <strong>pianoflytt Stockholm pris</strong> från oss. Kostnaden baseras på pianots typ, vikt och flyttens komplexitet. Att försöka <strong>flytta ett piano</strong> själv kan leda till dyra skador på både instrumentet och fastigheten, så anlita alltid proffs.
+                                            Vår expertis sträcker sig bortom pianon. Vi hjälper dig gärna med andra tunga lyft som kassaskåp, industrimaskiner, stora konstverk och andra föremål som kräver specialhantering.
                                         </p>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        {/* Ersätt den gamla sidomenyn med den nya komponenten */}
+                        <ServiceSidebar />
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4 col-md-8">
-                            <div className="wpo-single-sidebar">
-                                <div className="wpo-service-widget widget">
-                                    <h2>Alla Tjänster</h2>
-                                    <ul>
-                                        <li><a href="/flytthjalp">Flytthjälp</a></li>
-                                        <li><a href="/flyttstadning">Flyttstädning</a></li>
-                                        <li><a href="/magasinering">Magasinering</a></li>
-                                        <li><a href="/foretagsflytt">Företagsflytt</a></li>
-                                        <li><a href="/pianoflytt">Pianoflytt</a></li>
-                                    </ul>
-                                </div>
-                                <div className="wpo-contact-widget widget">
-                                    <h2>Flytta ett piano?</h2>
-                                    <p>Låt våra experter hantera ditt instrument. Kontakta oss för en trygg pianoflytt och en kostnadsfri offert.</p>
-                                    <a href="/kontakt">Begär Offert</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
-
             <Footer />
             <Scrollbar />
         </Fragment>
